@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public username: string = '';
 
-  public onResetClick(event: any): void {
+  public onResetClick(): void {
     this.username = '';
   }
 }
