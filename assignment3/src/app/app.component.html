@@ -1,0 +1,13 @@
+<button
+  type="button"
+  (click)="onDisplayDetailsClick()">Display Details</button>
+
+<p *ngIf="displayDetails">Secret Password = tuna</p>
+
+<h3>Log:</h3>
+
+<p
+  *ngFor="let record of log; let i = index"
+  [ngStyle]="{backgroundColor: isHighlighted(i) ? 'blue' : ''}"
+  [ngClass]="{highlighted: isHighlighted(i)}"
+>{{record.timestamp.toString()}}: {{record.message}}</p>
